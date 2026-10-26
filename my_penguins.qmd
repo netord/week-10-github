@@ -1,0 +1,21 @@
+---
+title: "Penguin Data Analysis"
+format: html
+---
+
+# Libraries
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+# Summary
+
+```{r}
+penguins |>
+  group_by(species) |>
+  summarise(
+    average_bill_length = mean(bill_length_mm, na.rm= TRUE)
+  )
+```
